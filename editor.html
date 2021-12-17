@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title> Browser Pad </title>
+		<style>
+			main {
+				font: 2rem/1.5 monospace;
+				max-width: 60rem;
+				margin: 0 auto;
+				padding: 4rem;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<main id="editor" contenteditable></main>
+
+
+		<script type="text/javascript">
+			(function() {
+
+				// Load from localStorage
+				document.getElementById('editor').textContent = window.localStorage.getItem("content");
+
+				// Add interval to auto save to localStorage
+				const intervalId = setInterval(
+					() => {
+						const content = document.getElementById('editor').textContent;
+						console.log("Saving:", content);
+						window.localStorage.setItem("content", content);
+					},
+					1000 * 60 * 1 // 1 minute
+				);
+			}() );
+		</script>
+	</body>
+</html>
+
+
