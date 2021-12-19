@@ -4,9 +4,15 @@ A simple HTML page that turns your browser into a basic editor.
 
 == Usage
 
-1. Open the `editor.html` file in your brower and bookmark.
+Use online at: https://mkaz.github.io/browser-pad/
 
-2. Type.
+or
+
+. Clone repo
+
+. Open the `index.html` file in your brower. No server needed.
+
+. Type.
 
 The page will auto save every minute to localStorage, so when you come back
 whatever you type persists.
@@ -15,10 +21,10 @@ That's it.
 
 == Why?
 
-It is a nice little scratch pad. If you bookmark in your brower, or set as homepage,
-just a click away.
+It makes for a simple & fast scratch pad. Bookmark, or even set as homepage,
+then a quick place to type is just a click away.
 
 Plus you get browser spellcheck, and if you use a browser plugin like Grammarly
-or Microsoft Editor you get grammar suggestions too. This makes it better then
-most markdown electron apps.
+or Microsoft Editor you get grammar suggestions too. This makes it better for
+me then most markdown electron apps.
 
