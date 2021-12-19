@@ -2,17 +2,19 @@
 	<head>
 		<title> Browser Pad </title>
 		<style>
-			body {
-				font-family: sans-serif;
+			html, body {
 				background: #F0F0F0;
-				padding: 2rem;
+				font-family: sans-serif;
 			}
+
 			main {
-				font: 2rem/1.5 monospace;
 				max-width: 60rem;
-				margin: 0 auto;
+				font-size: 2rem;
+				line-height: 1.5;
+				font-family: Hack, Fira, monospace;
+				margin: 2rem auto;
 				padding: 2rem 4rem 4rem 4rem;
-				background: white;
+				background-color: white;
 			}
 
 			footer {
@@ -34,17 +36,17 @@
 		<script type="text/javascript">
 			(function() {
 
-				// Load from localStorage
-				document.getElementById('editor').textContent = window.localStorage.getItem("content");
+				const editor = document.getElementById('editor');
 
-				// Add interval to auto save to localStorage
-				const intervalId = setInterval(
-					() => {
-						const content = document.getElementById('editor').textContent;
-						window.localStorage.setItem("content", content);
-					},
-					1000 * 60 * 1 // 1 minute
-				);
+				// Load from localStorage
+				editor.textContent = window.localStorage.getItem("content");
+
+				// Add event listener on input change to save to localStorage
+				// https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
+				editor.addEventListener( 'input', () => {
+					const content = document.getElementById('editor').textContent;
+					window.localStorage.setItem("content", content);
+				} );
 			}() );
 		</script>
 	</body>
