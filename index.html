@@ -47,6 +47,9 @@
 				// Load from localStorage
 				editor.textContent = window.localStorage.getItem("content");
 
+				// Autofocus
+				editor.focus();
+
 				// Add event listener on input change to save to localStorage
 				// https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
 				editor.addEventListener( 'input', () => {
