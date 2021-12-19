@@ -15,6 +15,12 @@
 				margin: 2rem auto;
 				padding: 2rem 4rem 4rem 4rem;
 				background-color: white;
+				color: #333;
+			}
+
+			main:empty:before {
+				content: attr(placeholder);
+				color: #CCC;
 			}
 
 			footer {
@@ -27,7 +33,7 @@
 		</style>
 	</head>
 	<body>
-		<main id="editor" contenteditable></main>
+		<main id="editor" contenteditable placeholder="Type here..."></main>
 		<footer>
 			<span>An <a href="https://mkaz.blog/">mkaz</a> contraption. </span>
 			<span>Source: <a href="https://github.com/mkaz/browser-pad">Browser Pad</a></span>
