@@ -3,6 +3,7 @@
 		<title> Browser Pad </title>
 		<style>
 			body {
+				font-family: sans-serif;
 				background: #F0F0F0;
 				padding: 2rem;
 			}
@@ -13,11 +14,22 @@
 				padding: 2rem 4rem 4rem 4rem;
 				background: white;
 			}
+
+			footer {
+				display: flex;
+				max-width: 60rem;
+				margin: 1rem auto;
+				justify-content: space-between;
+				font-size: 0.85rem;
+			}
 		</style>
 	</head>
 	<body>
 		<main id="editor" contenteditable></main>
-
+		<footer>
+			<span>An <a href="https://mkaz.blog/">mkaz</a> contraption. </span>
+			<span>Source: <a href="https://github.com/mkaz/browser-pad">Browser Pad</a></span>
+		</footer>
 
 		<script type="text/javascript">
 			(function() {
